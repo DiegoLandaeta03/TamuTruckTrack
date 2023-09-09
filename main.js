@@ -42,23 +42,3 @@ $(document).ready(function () {
           'margin-top': '0px'
       }); 
   });
-  
-  /*
-  
-  // Function to "hide" navbar when scrolling down (FIXME)
-  
-  var prevScrollpos = window.pageYOffset;
-  
-  window.onscroll = function() {
-    var currentScrollPos = window.pageYOffset;
-  
-    if (prevScrollpos < currentScrollPos && currentScrollPos > 100) {
-      document.getElementById("navbar-hide").style.top = "-70px";
-      }
-    else {
-      document.getElementById("navbar-hide").style.top = "0";
-    }
-    prevScrollpos = currentScrollPos;
-  }
-  
-  */
