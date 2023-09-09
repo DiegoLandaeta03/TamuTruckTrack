@@ -169,8 +169,13 @@ body, html {
 
 /* Body Text */
 
+main{
+    opacity: 0.3;
+}
+
 #introduction {
     background-image: url(img/main.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 38vh;
