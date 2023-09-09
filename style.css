@@ -8,8 +8,6 @@
 body, html {    
     min-width: 800px;
     background: #2b0006;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2b0006, #424242);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #424242, #2b0006); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
      margin:0px;
      /* height: 100%; */
@@ -48,6 +46,11 @@ body, html {
 
 /* Navigation Bar */
 
+#nav {
+    background: #2b0006;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2b0006, #424242);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #424242, #2b0006); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
   
   .sub-home {
     display: none;
@@ -166,6 +169,9 @@ body, html {
 /* Body Text */
 
 #introduction {
+    background-image: url(img/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 38vh;
     height: 100vh;
     line-height: 1.2 !important; /* Changes line-height from 1.5 since there was too much space in-between lines */
