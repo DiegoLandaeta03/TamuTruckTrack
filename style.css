@@ -50,6 +50,7 @@ body, html {
     background: #2b0006;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2b0006, #424242);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #424242, #2b0006); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
 }
   
   .sub-home {
@@ -108,7 +109,7 @@ body, html {
   }
   
   .navbar a:hover, .subnav:hover .subnavbtn {
-    background:#8CA6DB;
+    background:white;
     color: black;
     border-radius:5px;
   }
