@@ -28,14 +28,3 @@ function saveFoodTruck(name, location, openTime, closeTime, menu, website) {
       return null; // Food truck not found
     }
   }
-  
-//   // Example usage:
-//   saveFoodTruck("Tasty Tacos", "123 Main St", ["Taco", "Burrito"]);
-//   const retrievedTruck = getFoodTruck("Tasty Tacos");
-  
-//   if (retrievedTruck) {
-//     console.log("Found Food Truck:", retrievedTruck);
-//   } else {
-//     console.log("Food Truck not found");
-//   }
-  
