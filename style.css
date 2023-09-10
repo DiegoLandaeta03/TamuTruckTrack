@@ -55,8 +55,9 @@
 }
 
 #map { 
-    margin-top: 100px;
-    height: 400px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    height: 600px;
     width: 1000px;
     border: solid grey 2px;
     border-radius: 20px;
@@ -156,7 +157,7 @@ main{
 #about-us {
     /* Changed 48vmin to 85px */
     padding: 85px; 
-    min-height: 50vmin;
+    min-height: 70vmin;
 }
 
 #about-us h1 {
@@ -181,31 +182,37 @@ main{
     transform: scale(1.04);
 }
 
+.testing-card{
+    margin-top: 15px;
+    margin-bottom: 15px;        
+}
+
+.index-card-div{
+    margin-top: 0px !important;
+}
+.testing-card:hover{
+    transform: scale(1);
+}
+
+.newback-index{
+    padding: 50px 0px 50px 0px;
+}
+
+.index-card-img{
+    border-radius: 15px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.row {
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+
 .normal-text {
     font-size: 1.1rem; /* 50px */
     color: white;
     padding-bottom: 0%;
-}
-
-.about-circle { /* Puts a circle around my headshot */
-    height: 24vmax;
-    width: 24vmax;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 0px 16px 16px rgba(255, 255, 255, 0.2);
-}
-
-.about-circle img { /* Styles/sizes the headshot */
-    height: 24vmax; /* Orig 28vmin */
-    width: auto;
-    border-radius: 50%;
-    margin: auto;
-}
-
-.aboutMe-link { /* Adds a color and weight to links in About Me*/
-    color: rgb(70, 170, 224);
-    font-size: 1.2rem;
-    font-weight: 600 !important;
 }
 
 /* Creates spacing for the descriptions in the boxes */
@@ -230,13 +237,13 @@ main{
 
 /* Contact Section (change to rem, %, or vh) */
 
-#contact-me {
+#contact-us {
     padding-top: 10vmin;
     font-size: 50px;
     padding-bottom: 18px;
 }
 
-#contact-me h3 {
+#contact-us h3 {
     color: white;
 }
 
@@ -244,10 +251,10 @@ main{
     padding: 1vmin 1vmin 1vmin 1vmin;
 }
 
-.fa-linkedin {
-    color:#1C6FD0;
+.fa-envelope {
+    color:white;
 }
 
-.fa-linkedin:hover {
-    color:#a8a8a8;
+.fa-envelope:hover {
+    color:black;
 }
