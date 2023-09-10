@@ -1,8 +1,11 @@
-function saveFoodTruck(name, location, menu) {
+function saveFoodTruck(name, location, openTime, closeTime, menu, website) {
     const truck = {
       name: name,
       location: location,
+      openTime: openTime,
+      closeTime: closeTime,
       menu: menu,
+      website: website,
     };
   
     // Convert the food truck object to a JSON string
@@ -26,13 +29,13 @@ function saveFoodTruck(name, location, menu) {
     }
   }
   
-  // Example usage:
-  saveFoodTruck("Tasty Tacos", "123 Main St", ["Taco", "Burrito"]);
-  const retrievedTruck = getFoodTruck("Tasty Tacos");
+//   // Example usage:
+//   saveFoodTruck("Tasty Tacos", "123 Main St", ["Taco", "Burrito"]);
+//   const retrievedTruck = getFoodTruck("Tasty Tacos");
   
-  if (retrievedTruck) {
-    console.log("Found Food Truck:", retrievedTruck);
-  } else {
-    console.log("Food Truck not found");
-  }
+//   if (retrievedTruck) {
+//     console.log("Found Food Truck:", retrievedTruck);
+//   } else {
+//     console.log("Food Truck not found");
+//   }
   

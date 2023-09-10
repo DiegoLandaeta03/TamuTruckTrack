@@ -6,6 +6,7 @@ function handleSubmit(event) {
     const name = document.getElementById("name").value;
     const location = document.getElementById("location").value;
     const menu = document.getElementById("menu").value;
+    const website = document.getElementById("website").value;
 
     // Check if the name field is not empty
     if (name.trim() !== "") {
@@ -14,20 +15,29 @@ function handleSubmit(event) {
             name: name,
             location: location,
             menu: menu,
+            website: website,
         };
+
+        console.log(document.getElementById("name").value)
+        console.log(document.getElementById("location").value)
+        console.log(document.getElementById("menu").value)
+        console.log(document.getElementById("website").value)
 
         // Convert the food truck object to a JSON string
         const truckJSON = JSON.stringify(truck);
 
         // Store the JSON string in Local Storage
         localStorage.setItem(name, truckJSON);
+        
 
         // Clear the form fields
         document.getElementById("name").value = "";
         document.getElementById("location").value = "";
         document.getElementById("menu").value = "";
+        document.getElementById("website").value = "";
 
         alert("Food truck data saved successfully!");
+        
     } else {
         alert("Please enter a valid name for the food truck.");
     }
