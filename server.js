@@ -15,11 +15,11 @@ app.listen(3001,function () {
 });
 
 // const adapter = new JSONFile(file)
-const defaultData = {
+let defaultData = {
     foodTrucks: [
         {   
             name: "Bad Chix",
-            location: "Zcach",
+            location: "Zach",
             openTime: "6AM",
             closeTime: "10PM",
             menu: "menu",
@@ -28,27 +28,35 @@ const defaultData = {
     ]
 };
 
-// app.get("/Trucks", (req, res) => {
-//   res.send(defaultData.foodTrucks);  
-// });
+app.get("/Trucks", (req, res) => {
+   res.send(defaultData.foodTrucks);  
+ });
 
-// Function to add a new food truck to the database
+// Function to write a new food truck to the database
 function addFoodTruck(newFoodTruck) {
-    db.get('foodTrucks')
-      .push(newFoodTruck)
-      .write();
-  }
-  
-  // Example usage:
-  const newFoodTruck = {
-    name: 'Tasty Tacos',
-    location: '123 Main St',
-    openTime: '10:00 AM',
-    closeTime: '8:00 PM',
-    menu: ['Tacos', 'Burritos', 'Quesadillas'],
-    website: 'https://www.tastytacos.com',
-  };
-  
-  // Call the function to add a new food truck
-  addFoodTruck(newFoodTruck);
-  
+    // Push the new food truck to the 'foodTrucks' array in the database
+    defaultData.foodTrucks.push(newFoodTruck);
+}
+
+// Function to read all food trucks from the database
+// function getAllFoodTrucks() {
+//     // Retrieve and return all food trucks from the 'foodTrucks' array in the database
+//     return app.get('foodTrucks').value();
+// }
+
+// Example usage:
+// Add a new food truck
+let newFoodTruck = {
+    name: 'Good Burgers',
+    location: 'Downtown',
+    openTime: '10AM',
+    closeTime: '8PM',
+    menu: 'Burgers, Fries, Shakes',
+    website: 'https://www.goodburgers.com',
+};
+
+ addFoodTruck(newFoodTruck);
+
+// // Read all food trucks
+// const allFoodTrucks = getAllFoodTrucks();
+// console.log(allFoodTrucks);
