@@ -57,8 +57,8 @@
 #map { 
     margin-top: 80px;
     margin-bottom: 40px;
-    height: 200px;
-    width: 1000px;
+    height: 70%;
+    width: 80%;
     border: solid grey 2px;
     border-radius: 20px;
     position: fixed;
