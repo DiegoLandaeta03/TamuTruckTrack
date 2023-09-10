@@ -25,6 +25,6 @@ function saveFoodTruck(name, location, openTime, closeTime, menu, website) {
       const truck = JSON.parse(truckJSON);
       return truck;
     } else {
-      return null; // Food truck not found
+      return null; // Food truck not foundx`
     }
   }
