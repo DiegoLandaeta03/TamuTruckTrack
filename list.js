@@ -35,8 +35,8 @@ function displayFoodTruckList() {
             <h2>${truck.name}</h2>
             <p>Location: ${truck.location}</p>
             <p>Hours: ${truck.openTime} - ${truck.closeTime}</p>
-            <p>Menu: ${truck.menu}</p>
-            <p><a href="${truck.website}" target="_blank">${truck.name}'s Website</a></p>
+            <p><a href="${truck.menu}" target="_blank">View Menu</a></p>
+            <p><a href="https://${truck.website}" target="_blank">${truck.name}'s Website</a></p>
         `;
     
         foodTruckList.appendChild(listItem);
