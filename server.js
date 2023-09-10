@@ -27,7 +27,49 @@ app.post('/addItem', (req, res) => {
   res.send('Item added to the database.');
 });
 
-// Start the Express server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+// const adapter = new JSONFile(file)
+let defaultData = {
+    foodTrucks: [
+        {   
+            name: "Bad Chix",
+            location: "Zach",
+            openTime: "6AM",
+            closeTime: "10PM",
+            menu: "menu",
+            website: "site"
+        }
+    ]
+};
+
+app.get("/Trucks", (req, res) => {
+   res.send(defaultData.foodTrucks);  
+ });
+
+// Function to write a new food truck to the database
+function addFoodTruck(newFoodTruck) {
+    // Push the new food truck to the 'foodTrucks' array in the database
+    defaultData.foodTrucks.push(newFoodTruck);
+}
+
+// Function to read all food trucks from the database
+// function getAllFoodTrucks() {
+//     // Retrieve and return all food trucks from the 'foodTrucks' array in the database
+//     return app.get('foodTrucks').value();
+// }
+
+// Example usage:
+// Add a new food truck
+let newFoodTruck = {
+    name: 'Good Burgers',
+    location: 'Downtown',
+    openTime: '10AM',
+    closeTime: '8PM',
+    menu: 'Burgers, Fries, Shakes',
+    website: 'https://www.goodburgers.com',
+};
+
+ addFoodTruck(newFoodTruck);
+
+// // Read all food trucks
+// const allFoodTrucks = getAllFoodTrucks();
+// console.log(allFoodTrucks);
