@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>TRUCK TRACK TAMU</title>
+	<!-- Importing bootstrap css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+	<!-- Works in pair with bootstrap and font awesome -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<!-- Font awesome (Github/Linkedin/Instagram icons etc.) -->
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+	<!-- Imports AOS library (CSS) -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script src="main.js"></script>
+
+	<style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');</style>
+	
+    <!-- Leaflet Library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+	<link rel="stylesheet" href="style.css">
+    
+	<meta name="keywords" content="Diego Landaeta Torres, CS, Computer Science, Portfolio, Student, Texas A&M, 2026">
+    <meta name="description" content="This a Portfolio Website for Diego Landaeta Torres, showcasing experience, projects, .">
+</head>
+
+<body data-aos-delay="0">
+
+	<!--Navigation Bar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="trucks.html">Find Trucks</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Earn Points</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div class="row justify-content-center">
+        <div id="map" class="row justify-content-center bottom-space">
+          <script>
+            // Live Map
+            var map = L.map('map').setView([30.6122578, -96.3415445], 13);
+  
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 19,
+              attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+  
+            var marker = L.marker([30.6122578, -96.3415445]).addTo(map);      
+          </script>
+        </div>
+      </div>
+  
