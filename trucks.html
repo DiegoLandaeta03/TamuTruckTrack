@@ -75,14 +75,19 @@
         <div id="map" class="row justify-content-center bottom-space">
           <script>
             // Live Map
-            var map = L.map('map').setView([30.6122578, -96.3415445], 13);
+            var map = L.map('map').setView([30.6122578, -96.3415445], 15);
   
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
               maxZoom: 19,
               attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
-  
-            var marker = L.marker([30.6122578, -96.3415445]).addTo(map);      
+            var marker = L.marker([30.6122578, -96.3415445],
+            //pointer pop up and details
+              {alt: 'MSC'}).addTo(map) 
+              .bindPopup("<b> 275 Joe Routt Blvd, College Station, TX 77840 </b><a href='https://goo.gl/maps/EUpSQAtqJXwSWTA36'>Get Directions</a>")
+              map.on('click', onMapClick);
+
+map.on('click', onMapClick);
           </script>
         </div>
       </div>
