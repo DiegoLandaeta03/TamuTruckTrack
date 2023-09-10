@@ -6,6 +6,7 @@ function handleSubmit(event) {
     const name = document.getElementById("name").value;
     const location = document.getElementById("location").value;
     const menu = document.getElementById("menu").value;
+    const website = document.getElementById("website").value;
 
     // Check if the name field is not empty
     if (name.trim() !== "") {
@@ -14,6 +15,7 @@ function handleSubmit(event) {
             name: name,
             location: location,
             menu: menu,
+            website: website,
         };
 
         // Convert the food truck object to a JSON string
@@ -26,6 +28,7 @@ function handleSubmit(event) {
         document.getElementById("name").value = "";
         document.getElementById("location").value = "";
         document.getElementById("menu").value = "";
+        document.getElementById("website").value = "";
 
         alert("Food truck data saved successfully!");
     } else {
