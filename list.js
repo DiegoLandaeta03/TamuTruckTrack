@@ -30,8 +30,15 @@ function displayFoodTruckList() {
 
     // Create list items for each food truck and append them to the list
     foodTrucks.forEach((truck) => {
-        const listItem = document.createElement("ul");
-        listItem.textContent = `${truck.name} - Location: ${truck.location}`;
+        const listItem = document.createElement("li"); // Use "li" for list items, not "ul"
+        listItem.innerHTML = `
+            <h2>${truck.name}</h2>
+            <p>Location: ${truck.location}</p>
+            <p>Hours: ${truck.openTime} - ${truck.closeTime}</p>
+            <p>Menu: ${truck.menu}</p>
+            <p><a href="${truck.website}" target="_blank">${truck.name}'s Website</a></p>
+        `;
+    
         foodTruckList.appendChild(listItem);
     });
 }
