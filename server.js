@@ -1,33 +1,54 @@
-const express = require('express');
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
+import express from 'express'
+// import cors from 'cors'
+// import axios from 'axios'
+import { Low } from 'lowdb'
+import { LowSync } from 'lowdb'
+import { JSONFileSync } from "lowdb/node"
+
+// const express = require("express");
+// const low = require("fix-esm").require("lowdb");
+// const FileSync = require("lowdb/adapters/JSONFileSync");
 
 const app = express();
-const port = process.env.PORT || 3000;
+app.listen(3001,function () {
+    console.log("listening on 3001")
+});
 
-// Create a JSON database using Lowdb
-const adapter = new FileSync('db.json');
-const db = low(adapter);
+// const adapter = new JSONFile(file)
+const defaultData = {
+    foodTrucks: [
+        {   
+            name: "Bad Chix",
+            location: "Zcach",
+            openTime: "6AM",
+            closeTime: "10PM",
+            menu: "menu",
+            website: "site"
+        }
+    ]
+};
 
-// Set up a default structure for the database (if it doesn't exist)
-db.defaults({ items: [] }).write();
+// app.get("/Trucks", (req, res) => {
+//   res.send(defaultData.foodTrucks);  
+// });
 
-// Define a route to add an item to the database
-app.post('/addItem', (req, res) => {
-  const newItem = {
-    name: 'Example Item',
-    description: 'This is an example item.',
+// Function to add a new food truck to the database
+function addFoodTruck(newFoodTruck) {
+    db.get('foodTrucks')
+      .push(newFoodTruck)
+      .write();
+  }
+  
+  // Example usage:
+  const newFoodTruck = {
+    name: 'Tasty Tacos',
+    location: '123 Main St',
+    openTime: '10:00 AM',
+    closeTime: '8:00 PM',
+    menu: ['Tacos', 'Burritos', 'Quesadillas'],
+    website: 'https://www.tastytacos.com',
   };
-
-  // Add the new item to the 'items' collection in the database
-  db.get('items')
-    .push(newItem)
-    .write();
-
-  res.send('Item added to the database.');
-});
-
-// Start the Express server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+  
+  // Call the function to add a new food truck
+  addFoodTruck(newFoodTruck);
+  
