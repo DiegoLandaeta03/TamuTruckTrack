@@ -90,9 +90,11 @@ app.listen(port, () => {
 })
 */
 
-const express = require('express');
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
+import express from 'express'
+import {Low} from 'lowdb'
+import { LowSync } from 'lowdb'
+import { JSONFileSync } from 'lowdb/node'
+
 
 const app = express();
 const port = process.env.PORT || 3000;
