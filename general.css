@@ -83,34 +83,34 @@ body, html{
     color: black;
     border-radius:5px;
   }
-  
-  section  {
-    margin:0em 10em 10em 10em;
-    padding:3em 10em 3em 10em;
-  }
-  
-  h1{
-    color: #111; 
-    font-size: 200px; 
-    font-weight: bold; 
-    letter-spacing: -1px; 
-    text-align: center;
-    padding: 0;
-    margin: 0;
-  }
-  
-  p {
-    color: black;  
-    font-size: 25px; 
-    line-height: 1.5;
-  }
-  
-  hr {
-    background-color: #000;
-  }
+
+section  {
+  margin:0em 10em 10em 10em;
+  padding:3em 10em 3em 10em;
+}
+
+h1{
+  color: #111; 
+  font-size: 200px; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  color: black;  
+  font-size: 25px; 
+  line-height: 1.5;
+}
+
+hr {
+  background-color: #000;
+}
 
 /* Body Text */
 
 main{
-    opacity: 0.3;
+  opacity: 0.3;
 }
