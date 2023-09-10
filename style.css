@@ -57,10 +57,11 @@
 #map { 
     margin-top: 80px;
     margin-bottom: 40px;
-    height: 600px;
-    width: 1000px;
+    height: 70%;
+    width: 80%;
     border: solid grey 2px;
     border-radius: 20px;
+    position: fixed;
 }
 
 /* Navigation Bar */
@@ -251,10 +252,10 @@ main{
     padding: 1vmin 1vmin 1vmin 1vmin;
 }
 
-.fa-linkedin {
-    color:#1C6FD0;
+.fa-envelope {
+    color:white;
 }
 
-.fa-linkedin:hover {
-    color:#a8a8a8;
+.fa-envelope:hover {
+    color:black;
 }
