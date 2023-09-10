@@ -73,11 +73,12 @@
 
         <form id="foodTruckForm">
             <div class="form-group">
-                <label for="foodTruckDropdown">Choose a Food Truck:</label>
-                <select id="foodTruckDropdown" name="foodTruck">
-                    <!-- Dropdown options will be populated dynamically using JavaScript -->
+                <!-- Add this to your HTML form -->
+                <label for="foodTruckSelect">Select a Food Truck:</label>
+                <select id="foodTruckSelect" name="foodTruckSelect">
+                    <!-- Options will be dynamically added here -->
                 </select>
-                <br>
+                <br><br>
 
             </div>
 
@@ -209,20 +210,6 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         <script src="formDB.js">
-
-            function populateDropdown() {
-            const dropdown = document.getElementById("foodTruckDropdown");
-
-            foodTrucks.forEach((foodTruck) => {
-                const option = document.createElement("option");
-                option.value = foodTruck.name;
-                option.textContent = foodTruck.name;
-                dropdown.appendChild(option);
-            });
-        }
-
-        // Call the populateDropdown function when the page loads
-        window.onload = populateDropdown;
         </script>
     </body>
 
