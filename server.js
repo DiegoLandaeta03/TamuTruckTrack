@@ -1,4 +1,4 @@
-/*
+
 //Imports
 import express from 'express';
 import cors from 'cors';
@@ -60,17 +60,18 @@ When that happens, this code will run!
 We want this section to:
   - Make a GET request to the Jokes API and retrieve a joke 
   - Respond with a successful status code (200)
+*/
 
-// app.get('/', (req, res) => {
-//   console.log("GET endpoint hit!")
-//   axios({
-//     method: 'get',
-//     url: 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit',
-//   })
-//   .then(function (response) {
-//     res.send(response.data)
-//   });
-// })
+app.get('/', (req, res) => {
+  console.log("GET endpoint hit!")
+  axios({
+    method: 'get',
+    url: 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit',
+  })
+  .then(function (response) {
+    res.send(response.data)
+  });
+})
 
 app.get("/", (req, res) => {
     res.send(data.foodTrucks);  
@@ -88,82 +89,82 @@ app.get('/trucks', async (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-*/
-
-import express from 'express'
-import {Low} from 'lowdb'
-import { LowSync } from 'lowdb'
-import { JSONFileSync } from 'lowdb/node'
 
 
-const app = express();
-const port = process.env.PORT || 3000;
+// import express from 'express'
+// import {Low} from 'lowdb'
+// import { LowSync } from 'lowdb'
+// import { JSONFileSync } from 'lowdb/node'
 
-// Create a JSON database using Lowdb
-const adapter = new FileSync('db.json');
-const db = low(adapter);
 
-// Set up a default structure for the database (if it doesn't exist)
-db.defaults({ items: [] }).write();
+// const app = express();
+// const port = process.env.PORT || 3000;
 
-// Define a route to add an item to the database
-app.post('/addItem', (req, res) => {
-  const newItem = {
-    name: 'Example Item',
-    description: 'This is an example item.',
-  };
+// // Create a JSON database using Lowdb
+// const adapter = new FileSync('db.json');
+// const db = low(adapter);
 
-  // Add the new item to the 'items' collection in the database
-  db.get('items')
-    .push(newItem)
-    .write();
+// // Set up a default structure for the database (if it doesn't exist)
+// db.defaults({ items: [] }).write();
 
-  res.send('Item added to the database.');
-});
+// // Define a route to add an item to the database
+// app.post('/addItem', (req, res) => {
+//   const newItem = {
+//     name: 'Example Item',
+//     description: 'This is an example item.',
+//   };
 
-// const adapter = new JSONFile(file)
-let defaultData = {
-    foodTrucks: [
-        {   
-            name: "Bad Chix",
-            location: "Zach",
-            openTime: "6AM",
-            closeTime: "10PM",
-            menu: "menu",
-            website: "site"
-        }
-    ]
-};
+//   // Add the new item to the 'items' collection in the database
+//   db.get('items')
+//     .push(newItem)
+//     .write();
 
-app.get("/Trucks", (req, res) => {
-   res.send(defaultData.foodTrucks);  
- });
+//   res.send('Item added to the database.');
+// });
 
-// Function to write a new food truck to the database
-function addFoodTruck(newFoodTruck) {
-    // Push the new food truck to the 'foodTrucks' array in the database
-    defaultData.foodTrucks.push(newFoodTruck);
-}
+// // const adapter = new JSONFile(file)
+// let defaultData = {
+//     foodTrucks: [
+//         {   
+//             name: "Bad Chix",
+//             location: "Zach",
+//             openTime: "6AM",
+//             closeTime: "10PM",
+//             menu: "menu",
+//             website: "site"
+//         }
+//     ]
+// };
 
-// Function to read all food trucks from the database
-// function getAllFoodTrucks() {
-//     // Retrieve and return all food trucks from the 'foodTrucks' array in the database
-//     return app.get('foodTrucks').value();
+// app.get("/Trucks", (req, res) => {
+//    res.send(defaultData.foodTrucks);  
+//  });
+
+// // Function to write a new food truck to the database
+// function addFoodTruck(newFoodTruck) {
+//     // Push the new food truck to the 'foodTrucks' array in the database
+//     defaultData.foodTrucks.push(newFoodTruck);
 // }
 
-// Example usage:
-// Add a new food truck
-let newFoodTruck = {
-    name: 'Good Burgers',
-    location: 'Downtown',
-    openTime: '10AM',
-    closeTime: '8PM',
-    menu: 'Burgers, Fries, Shakes',
-    website: 'https://www.goodburgers.com',
-};
+// // Function to read all food trucks from the database
+// // function getAllFoodTrucks() {
+// //     // Retrieve and return all food trucks from the 'foodTrucks' array in the database
+// //     return app.get('foodTrucks').value();
+// // }
 
- addFoodTruck(newFoodTruck);
+// // Example usage:
+// // Add a new food truck
+// let newFoodTruck = {
+//     name: 'Good Burgers',
+//     location: 'Downtown',
+//     openTime: '10AM',
+//     closeTime: '8PM',
+//     menu: 'Burgers, Fries, Shakes',
+//     website: 'https://www.goodburgers.com',
+// };
 
-// // Read all food trucks
-// const allFoodTrucks = getAllFoodTrucks();
-// console.log(allFoodTrucks);
+//  addFoodTruck(newFoodTruck);
+
+// // // Read all food trucks
+// // const allFoodTrucks = getAllFoodTrucks();
+// // console.log(allFoodTrucks);
