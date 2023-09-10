@@ -65,6 +65,12 @@
               <a href="databaseForm.html">Register</a>
           </li>
           <li class="nav-item">
+            <a href="updateForm.html">Update</a>
+          </li>
+          <li class="nav-item">
+            <a href="sight.html">Post Sighting</a>
+          </li>
+          <li class="nav-item">
               <a href="index.html#contact-us">Contact Us</a>
           </li>
         </ul>
@@ -74,20 +80,23 @@
       <div class="row justify-content-center">
         <div id="map" class="row justify-content-center bottom-space">
           <script>
-            // Live Map
-            var map = L.map('map').setView([30.6122578, -96.3415445], 15);
-  
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              maxZoom: 19,
-              attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
-            var marker = L.marker([30.6122578, -96.3415445],
-            //pointer pop up and details
-              {alt: 'MSC'}).addTo(map) 
-              .bindPopup("<b> 275 Joe Routt Blvd, College Station, TX 77840 </b><a href='https://goo.gl/maps/EUpSQAtqJXwSWTA36'>Get Directions</a>")
-              map.on('click', onMapClick);
+var map = L.map('map').setView([30.6122578, -96.3415445], 15);
+mapLink =
+  '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+L.tileLayer(
+  'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; ' + mapLink + ' Contributors',
+    maxZoom: 19,
+  }).addTo(map);
 
-map.on('click', onMapClick);
+  var marker1 = L.marker([30.6122578, -96.3415445])
+      .bindPopup("<b> 275 Joe Routt Blvd, College Station, TX 77840 </b><a href='https://goo.gl/maps/EUpSQAtqJXwSWTA36'>Get Directions</a>")
+      .addTo(map);
+
+    var marker2 = L.marker([30.6202141, -96.3404038])
+      .bindPopup("<b> Spence St College Station, 77843</b><a href='https://goo.gl/maps/CXGcgxyg3iDh284t7'> Get Directions</a>")
+      .addTo(map);
+
           </script>
         </div>
       </div>

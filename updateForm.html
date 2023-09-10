@@ -40,37 +40,39 @@
 
     <!--Navigation Bar-->
 
-    <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
-        <a href="index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a href="#about-us">About Us<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="trucks.html">Find Trucks</a>
-                </li>
-                <li class="nav-item">
-                    <a href="">Register</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact-us">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+    <a href="index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a href="index.html#about-us">About Us<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a href="trucks.html">Find Trucks</a>
+        </li>
+        <li class="nav-item">
+            <a href="databaseForm.html">Register</a>
+        </li>
+        <li class="nav-item">
+          <a href="updateForm.html">Update</a>
+        </li>
+        <li class="nav-item">
+            <a href="sight.html">Post Sighting</a>
+        </li>
+        <li class="nav-item">
+            <a href="index.html#contact-us">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+</nav>
 
-    <head>
-        <title>Food Truck Update Form</title>
-    </head>
+<body>
+    <h1 class="title">Update Form</h1>
 
-    <body>
-        <h1>Food Truck Update Form</h1>
-
+    <div class="contain">
         <form id="foodTruckForm">
             <div class="form-group">
                 <!-- Add this to your HTML form -->
@@ -205,9 +207,10 @@
             </div>
 
             <div class="form-group">
-                <label for="website">Website</label>
-                <input type="text" class="form-control" id="website" placeholder="Website Link">
+            <label for="website">Website</label>
+            <input type="text" class="form-control" id="website" placeholder="Website Link">
             </div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         <script src="updateFormDB.js">
