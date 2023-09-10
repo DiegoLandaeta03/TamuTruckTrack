@@ -117,3 +117,108 @@ hr {
 main{
   opacity: 0.3;
 }
+
+#truck-list {
+  /* Changed 48vmin to 85px */
+  padding: 85px; 
+  min-height: 70vmin;
+}
+
+#truck-list h1 {
+  font-size: xxx-large;
+  color: black;
+}
+
+#truck-list p {
+  margin-bottom: 0%;
+  color: white;
+}
+
+#truck-list a { /* Part of aboutMe-link */
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+#truck-list a:hover { /* Used for "popping" effect */
+  color: rgb(70, 170, 224);
+  text-decoration: none;
+  transform: scale(1.04);
+}
+
+.testing-card{
+  margin-top: 15px;
+  margin-bottom: 15px;        
+}
+
+.index-card-div{
+  margin-top: 0px !important;
+}
+.testing-card:hover{
+  transform: scale(1);
+}
+
+.newback-index{
+  padding: 50px 0px 50px 0px;
+}
+
+.index-card-img{
+  border-radius: 15px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.row {
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.normal-text {
+  font-size: 1.1rem; /* 50px */
+  color: white;
+  padding-bottom: 0%;
+}
+
+/* Creates spacing for the descriptions in the boxes */
+.card-spacing {
+  padding: 3.5vmin 3.5vmin 3.5vmin 3.5vmin;
+}
+
+
+/* Class for all the dark boxes that text goes in */
+.rounded-box {
+  border-radius: 15px;
+  background: #400000;
+  
+  box-shadow: 4px 4px 12px 4px rgba(0,0,0,0.2);
+  transition: 0.4s;
+}
+
+/* Creates light white shadow around box on hover */
+.rounded-box:hover {
+  box-shadow: 4px 8px 24px 4px black;
+}
+
+/* Contact Section (change to rem, %, or vh) */
+
+#contact-us {
+  padding-top: 10vmin;
+  font-size: 50px;
+  padding-bottom: 18px;
+}
+
+#contact-us h3 {
+  color: white;
+}
+
+.social-spacing {
+  padding: 1vmin 1vmin 1vmin 1vmin;
+}
+
+.fa-envelope {
+  color:white;
+}
+
+.fa-envelope:hover {
+  color:black;
+}
