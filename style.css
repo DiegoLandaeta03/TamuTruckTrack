@@ -245,10 +245,10 @@ main{
     padding: 1vmin 1vmin 1vmin 1vmin;
 }
 
-.fa-linkedin {
-    color:#1C6FD0;
+.fa-envelope {
+    color:white;
 }
 
-.fa-linkedin:hover {
-    color:#a8a8a8;
+.fa-envelope:hover {
+    color:black;
 }
