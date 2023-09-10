@@ -84,9 +84,10 @@
             var marker = L.marker([30.6122578, -96.3415445],
             //pointer pop up and details
               {alt: 'MSC'}).addTo(map) 
-              .bindPopup("275 Joe Routt Blvd, College Station, TX 77843")
+              .bindPopup("<b> 275 Joe Routt Blvd, College Station, TX 77840 </b><a href='https://goo.gl/maps/EUpSQAtqJXwSWTA36'>Get Directions</a>")
+              map.on('click', onMapClick);
 
-    
+map.on('click', onMapClick);
           </script>
         </div>
       </div>
