@@ -5,13 +5,13 @@
     --text-color: #ffffff;
 }
 
-body, html {    
+.index, html{    
     min-width: 800px;
-    background: #2b0006;  /* fallback for old browsers */
+    background: #400000;  /* fallback for old browsers */
 
      margin:0px;
      /* height: 100%; */
-     font-family: 'Montserrat', sans-serif; /* Orig Segoe UI Symbol */
+     font-family: Arial, sans-serif; /* Orig Segoe UI Symbol */
      height: 100vh;
      width: 100%;
      background-position: center;
@@ -22,6 +22,22 @@ body, html {
      scroll-behavior: smooth;
 }
 
+.trucks{
+    min-width: 800px;
+    background: white;  /* fallback for old browsers */
+
+     margin:0px;
+     /* height: 100%; */
+     font-family: Arial, sans-serif; /* Orig Segoe UI Symbol */
+     height: 100vh;
+     width: 100%;
+     background-position: center;
+     background-repeat: repeat;
+     background-size: cover;
+    
+     /* Added smooth scrolling so that when using "bookmarks" it doesn't instantly teleport you */
+     scroll-behavior: smooth;
+}
 /* Customizes the scrollbar */
 
 ::-webkit-scrollbar {
@@ -42,33 +58,19 @@ body, html {
     margin-top: 100px;
     height: 400px;
     width: 1000px;
+    border: solid grey 2px;
+    border-radius: 20px;
 }
 
 /* Navigation Bar */
-
 #nav {
-    background: #2b0006;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2b0006, #424242);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #424242, #2b0006); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
+    background-color: #400000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #400000, #424242);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #424242, #400000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-bottom: 2px solid #424242; /* Specify border color and style */
 }
-  
-  .sub-home {
-    display: none;
-    position: absolute;
-    right: 0;
-    left: 0; 
-  
-    z-index: 1;   
-    transform: perspective(-10px);
-  }
-  
-  #trapezoid:hover .sub-home {
-    justify-content: center;
-    margin-top: 53px;
-  }
-  
-  .navbar {
+
+.navbar {
     position: sticky;
     top: 0;
     display:flex;
@@ -76,7 +78,7 @@ body, html {
     justify-content: center;
     height: 100px;
   }
-  
+
   .navbar a {
     float: left;
     font-size: 16px;
@@ -89,56 +91,11 @@ body, html {
     transition: all 0.5s ease;
   }
   
-  .subnav {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .subnav .subnavbtn {
-    font-size: 16px; 
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 25px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    transition: all 0.5s ease;
-  }
-  
-  .navbar a:hover, .subnav:hover .subnavbtn {
-    background:white;
+  .navbar a:hover{
+    background: white;
     color: black;
     border-radius:5px;
   }
-  
-  .subnav-content {
-    display: none;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    z-index: 1;   
-    transform: perspective(-10px);
-  }
-  
-  .subnav-content a {
-    float: left;
-    color: white;
-    text-decoration: none; 
-  }
-  
-  .subnav-content a:hover {
-    background:#6980e9;
-    color: black;
-  }
-  
-  .subnav:hover .subnav-content {
-    display: flex;
-    justify-content: center;
-  }
-  
   
   section  {
     margin:0em 10em 10em 10em;
@@ -147,7 +104,6 @@ body, html {
   
   h1{
     color: #111; 
-    font-family: 'Montserrat', sans-serif; 
     font-size: 200px; 
     font-weight: bold; 
     letter-spacing: -1px; 
@@ -157,8 +113,7 @@ body, html {
   }
   
   p {
-    color: #111; 
-    font-family: 'Calibri', sans-serif; 
+    color: black;  
     font-size: 25px; 
     line-height: 1.5;
   }
@@ -201,7 +156,7 @@ main{
 #about-us {
     /* Changed 48vmin to 85px */
     padding: 85px; 
-    min-height: 100vmin;
+    min-height: 50vmin;
 }
 
 #about-us h1 {
@@ -272,87 +227,6 @@ main{
 .rounded-box:hover {
     box-shadow: 4px 8px 24px 4px rgba(255, 255, 255, 0.4);
   }
-
-/* Experience Section */
-
-#experience {
-    padding-top: 85px; /* Changed 48vmin to 85px - 85px 12vmin 0vmin 12vmin */
-    min-height: 100vmin;
-}
-
-#experience h1 {
-    font-size: xxx-large;
-    color: var(--text-color);
-}
-
-#experience h3 {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--text-color);
-}
-
-#experience p {
-    font-size: 1.1rem; /* 50px */
-    color: var(--text-color);
-    padding-bottom: 0%;
-    margin-bottom: 0%;
-}
-
-/* So that the images don't oversize (as they're more square) */
-#experience img {
-    height: auto;
-    width: 64%;
-}
-
-.box-image {
-    height: auto;
-    width: 100%;
-}
-
-/* Adds padding around element (image or text box) */
-.box-padding {
-    padding: 4vmin 2vmin 4vmin 2vmin;
-}
-
-/* Projects Section */
-
-#projects {
-    padding-top: 85px;
-    min-height: 100vmin;
-}
-
-#projects h1 {
-    font-size: xxx-large;
-    color: var(--text-color);
-}
-
-#projects h3 {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: var(--text-color);
-}
-
-#projects p {
-    font-size: 1.1rem; /* 50px */
-    color: var(--text-color);
-    padding-bottom: 0%;
-    margin-bottom: 0%;
-}
-
-#projects img {
-    height: auto;
-    width: 64%;
-}
-
-/* So that the rounded boxes don't touch the sides of the screen */
-.side-margin {
-    margin: 0vmin 4.2vmin 0vmin 4.2vmin;
-}
-
-/* Goes after each rounded-box to create seperation/space */
-.bottom-space {
-    margin-bottom: 4vmin;
-}
 
 /* Contact Section (change to rem, %, or vh) */
 
