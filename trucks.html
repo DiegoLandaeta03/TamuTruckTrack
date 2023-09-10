@@ -81,8 +81,12 @@
               maxZoom: 19,
               attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
-  
-            var marker = L.marker([30.6122578, -96.3415445]).addTo(map);      
+            var marker = L.marker([30.6122578, -96.3415445],
+            //pointer pop up and details
+              {alt: 'MSC'}).addTo(map) 
+              .bindPopup("275 Joe Routt Blvd, College Station, TX 77843")
+
+    
           </script>
         </div>
       </div>
