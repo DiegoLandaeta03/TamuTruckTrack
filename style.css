@@ -153,6 +153,7 @@ main{
 #about-us p {
     margin-bottom: 0%;
     color: white;
+    text-align: left;
 }
 
 #about-us a { /* Part of aboutMe-link */
