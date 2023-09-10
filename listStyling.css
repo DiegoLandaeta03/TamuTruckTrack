@@ -24,6 +24,10 @@ body, html{
      scroll-behavior: smooth;
 }
 
+#foodTruckList {
+    list-style: none; /* This removes the bullet points */
+}
+
 h2 {
     text-align: left;
     font-weight: bold;
