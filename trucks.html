@@ -104,6 +104,18 @@
                 var marker4 = L.marker([30.607540, -96.345170])
                 .bindPopup("<b> Mays Business School </b><a href='https://goo.gl/maps/M9y1HKr5J3K9azxQ6'> Get Directions</a>")
                 .addTo(map);
+                // Get the marker-info div and marker-description paragraph
+                var markerInfo = document.getElementById('marker-info');
+                var markerDescription = document.getElementById('marker-description');
+
+                // Add a click event listener to the marker
+                marker.on('click', function () {
+                    // Replace this with the information you want to display when the marker is clicked
+                    var markerContent = 'This is the information about the marker.';
+                    markerDescription.textContent = markerContent;
+
+                    // You can also perform additional actions here when the marker is clicked
+                });
 
           </script>
         </div>
