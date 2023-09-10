@@ -18,11 +18,17 @@ function handleSubmit(event) {
             website: website,
         };
 
+        console.log(document.getElementById("name").value)
+        console.log(document.getElementById("location").value)
+        console.log(document.getElementById("menu").value)
+        console.log(document.getElementById("website").value)
+
         // Convert the food truck object to a JSON string
         const truckJSON = JSON.stringify(truck);
 
         // Store the JSON string in Local Storage
         localStorage.setItem(name, truckJSON);
+        
 
         // Clear the form fields
         document.getElementById("name").value = "";
@@ -31,6 +37,7 @@ function handleSubmit(event) {
         document.getElementById("website").value = "";
 
         alert("Food truck data saved successfully!");
+        
     } else {
         alert("Please enter a valid name for the food truck.");
     }

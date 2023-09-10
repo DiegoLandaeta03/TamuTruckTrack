@@ -1,1 +1,13 @@
+HowdyHack 2023 (9/9/2023)
 
+TruckTrackTamu (Texas A&M Food Truck Tracker Website)
+
+Authors: Michael Anderson, ALex Vo, Diego Torres, Ralph-Oliver Ebongue
+
+
+This project is a tracker for the food trucks which frequent the Texas A&M College Station campus.
+
+The tracker will keep track of a food truck's name, location, menu, and website.
+It also features and interactive map which shows the exact location of food trucks to users. There is also a list view which will list the food trucks rather than showing them on a map.
+
+This project also features a html registration form for food trucks to register their business on our platform.

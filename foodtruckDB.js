@@ -1,7 +1,9 @@
-function saveFoodTruck(name, location, menu) {
+function saveFoodTruck(name, location, openTime, closeTime, menu, website) {
     const truck = {
       name: name,
       location: location,
+      openTime: openTime,
+      closeTime: closeTime,
       menu: menu,
       website: website,
     };
