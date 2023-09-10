@@ -80,22 +80,30 @@
       <div class="row justify-content-center">
         <div id="map" class="row justify-content-center bottom-space">
           <script>
-var map = L.map('map').setView([30.6122578, -96.3415445], 15);
-mapLink =
-  '<a href="http://openstreetmap.org">OpenStreetMap</a>';
-L.tileLayer(
-  'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; ' + mapLink + ' Contributors',
-    maxZoom: 19,
-  }).addTo(map);
+            var map = L.map('map').setView([30.6122578, -96.3415445], 15);
+            mapLink =
+              '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+            L.tileLayer(
+              'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; ' + mapLink + ' Contributors',
+                maxZoom: 19,
+              }).addTo(map);
 
-  var marker1 = L.marker([30.6122578, -96.3415445])
-      .bindPopup("<b> 275 Joe Routt Blvd, College Station, TX 77840 </b><a href='https://goo.gl/maps/EUpSQAtqJXwSWTA36'>Get Directions</a>")
-      .addTo(map);
+              var marker1 = L.marker([30.6122578, -96.3415445])
+                  .bindPopup("<b> Memorial Student Center (MSC) </b><a href='https://goo.gl/maps/EUpSQAtqJXwSWTA36'>Get Directions</a>")
+                  .addTo(map);
 
-    var marker2 = L.marker([30.6202141, -96.3404038])
-      .bindPopup("<b> Spence St College Station, 77843</b><a href='https://goo.gl/maps/CXGcgxyg3iDh284t7'> Get Directions</a>")
-      .addTo(map);
+                var marker2 = L.marker([30.6202141, -96.3404038])
+                  .bindPopup("<b> Zachary Engineering Building </b><a href='https://goo.gl/maps/CXGcgxyg3iDh284t7'> Get Directions</a>")
+                  .addTo(map);
+
+                var marker3 = L.marker([30.612579, -96.343092])
+                  .bindPopup("<b> Innovative Learning Classroom Building (ILCB) </b><a href='https://goo.gl/maps/hnWQJS3fSxZ4VpHQA'> Get Directions</a>")
+                  .addTo(map);
+
+                var marker4 = L.marker([30.607540, -96.345170])
+                .bindPopup("<b> Mays Business School </b><a href='https://goo.gl/maps/M9y1HKr5J3K9azxQ6'> Get Directions</a>")
+                .addTo(map);
 
           </script>
         </div>
