@@ -1,0 +1,38 @@
+/* Creates color variables (accessed via: var(--main-color) etc.)*/
+:root{
+    /* --main-color: #29487D;
+    --side-color: #1DA1F2; */
+    --text-color: #ffffff;
+}
+
+body, html{    
+    min-width: 800px;
+    background: white;  /* fallback for old browsers */
+
+     margin:0px;
+     /* height: 100%; */
+     font-family: Arial, sans-serif; /* Orig Segoe UI Symbol */
+     height: 100vh;
+     width: 100%;
+     background-position: center;
+     background-repeat: repeat;
+     background-size: cover;
+     background-size: fill;
+    
+     text-align: left;
+     /* Added smooth scrolling so that when using "bookmarks" it doesn't instantly teleport you */
+     scroll-behavior: smooth;
+}
+
+h2 {
+    text-align: left;
+    font-weight: bold;
+}
+
+p{
+    text-align: left;
+}
+
+.other{
+    font-size: medium;
+}
