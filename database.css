@@ -23,7 +23,9 @@ body, html{
      scroll-behavior: smooth;
 }
 
-
+.title{
+  margin-top: 1%;
+}
 /* Customizes the scrollbar */
 
 ::-webkit-scrollbar {
@@ -38,15 +40,6 @@ body, html{
 
 ::-webkit-scrollbar-track {
     background-color: transparent;
-}
-
-#map { 
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: 600px;
-    width: 800px;
-    border: solid grey 2px;
-    border-radius: 20px;
 }
 
 /* Navigation Bar */
@@ -83,34 +76,49 @@ body, html{
     color: black;
     border-radius:5px;
   }
-  
-  section  {
-    margin:0em 10em 10em 10em;
-    padding:3em 10em 3em 10em;
+
+  .btn{
+    background-color: #400000;
   }
-  
-  h1{
-    color: #111; 
-    font-size: 80px; 
-    font-weight: bold; 
-    letter-spacing: -1px; 
-    text-align: center;
-    padding: 0;
-    margin: 0;
-  }
-  
-  p {
-    color: black;  
-    font-size: 25px; 
-    line-height: 1.5;
-  }
-  
-  hr {
-    background-color: #000;
-  }
+
+section  {
+  margin:0em 10em 10em 10em;
+  padding:3em 10em 3em 10em;
+}
+
+.contain{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+body a{
+  /* Remove underline and default text color */
+  text-decoration: none;
+  color: inherit;
+}
+
+h1{
+  color: #111; 
+  font-size: 70px; 
+  /*font-weight: bold; */
+  letter-spacing: -1px; 
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  color: black;  
+  font-size: 25px; 
+  line-height: 1.5;
+}
+
+hr {
+  background-color: #000;
+}
 
 /* Body Text */
 
 main{
-    opacity: 0.3;
+  opacity: 0.3;
 }
